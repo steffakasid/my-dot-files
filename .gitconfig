@@ -1,0 +1,21 @@
+[user]
+	email = github@steffen-rumpf.de
+	name = steffakasid
+[core]
+	editor = code --reuse-window --wait
+	pager = 
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --reuse-window --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = default-mergetool
+[mergetool "default-mergetool"]
+	cmd = code --reuse-window --wait $MERGED
+[pull]
+	rebase = true
+[alias]
+	graph = log --graph --pretty=short
+	merge-ff = merge --ff-only
+[init]
+	defaultBranch = main
