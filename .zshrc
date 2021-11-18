@@ -21,6 +21,8 @@ export PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export HISTFILE="$HOME/.zsh_history_$(tty | awk '{print(substr($1,6))}')"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/

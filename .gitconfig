@@ -4,6 +4,7 @@
 [core]
 	editor = code --reuse-window --wait
 	pager = 
+	filemode = false
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
