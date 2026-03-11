@@ -1,0 +1,14 @@
+---
+wipe_out_pattern:
+  - ".*.orig"
+wipe_out_dirs:
+  - "dist"
+exclude_dir:
+  - Library
+  - Applications
+  - .Trash
+  - go
+  - .git
+  - PlatformIO
+  - themes
+base_dir: /Users/sid/Projects
