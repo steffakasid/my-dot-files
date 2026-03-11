@@ -5,38 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Aliases
-alias reload-zshrc=". ~/.zshrc"
-alias k="kubectl"
-
-GPG_TTY=$(tty)
-export GPG_TTY
-
-# Custom exports
-export GOPATH=$HOME/Projects/go
-export EDITOR="code --wait"
-
-# Setup PATH
-PATH=$HOME/.bin:$PATH
-PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-PATH=/opt/homebrew/bin/:$PATH
-export PATH
+ZSH_CUSTOM=$HOME/.zsh-custom
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export HISTFILE="$HOME/.zsh_history/$(tty | awk '{print(substr($1,6))}')"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 export NVM_DIR="$HOME/.nvm"

@@ -18,5 +18,7 @@
 [alias]
 	graph = log --graph --pretty=short
 	merge-ff = merge --ff-only
+	pu = push
+	sw = switch
 [init]
 	defaultBranch = main
